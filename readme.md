@@ -15,12 +15,14 @@ no ill effects from removing all of the TFS crap out of my SLN and project files
 
 ## RemoveTFS-FromSLN.ps1
 
-This script removes the `GlobalSection(TeamFoundationVersionControl)` section in each SLN file.  Nothing fancy -- it's just a simple state machine
+This script removes the `GlobalSection(TeamFoundationVersionControl)` section in each SLN file (recursively
+from the current directory).  Nothing fancy -- it's just a simple state machine
 that outputs the SLN file line by line but ignores the TFS stuff.
 
 ## RemoveTFS-FromProjects.ps1
 
 This script removes 4 nodes in the project files used to indicate a project is under TFS source control -- `SccProjectName`, `SccLocalPath`,
-`SccAuxPath` and `SccProvider`.
+`SccAuxPath` and `SccProvider`.  Again, this script is recursive starting with the current directory.
+
 
  

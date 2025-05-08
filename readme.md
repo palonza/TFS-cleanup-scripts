@@ -24,5 +24,9 @@ that outputs the SLN file line by line but ignores the TFS stuff.
 This script removes 4 nodes in the project files used to indicate a project is under TFS source control -- `SccProjectName`, `SccLocalPath`,
 `SccAuxPath` and `SccProvider`.  Again, this script is recursive starting with the current directory.
 
+## Running example
+Set-ExecutionPolicy RemoteSigned -Scope Process
+.\RemoveTFS-Files.ps1
+
 
  
